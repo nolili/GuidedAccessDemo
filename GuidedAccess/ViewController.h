@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString *secretButtonRestrictionIdentifier = @"li.noli.guidedaccess.secretButton";
+
 @interface ViewController : UIViewController
+
+@property (nonatomic, weak) IBOutlet UIButton *secretButton;
+
+- (void)updateRestrictionState;
 
 @end

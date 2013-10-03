@@ -14,16 +14,14 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
+- (void)updateRestrictionState
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if (UIGuidedAccessRestrictionStateForIdentifier(@"li.noli.guidedaccess.secretButton") == UIGuidedAccessRestrictionStateDeny){
+        self.secretButton.hidden = YES;
+    }
+    else{
+        self.secretButton.hidden = NO;
+    }
 }
 
 @end
